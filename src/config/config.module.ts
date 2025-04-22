@@ -28,6 +28,7 @@ import * as Joi from 'joi';
         // Redis 配置
         REDIS_HOST: Joi.string().required(),
         REDIS_PORT: Joi.number().required(),
+        REDIS_PASSWORD: Joi.string().required(),
 
         // InfluxDB 配置
         INFLUXDB_URL: Joi.string().required(),
