@@ -13,25 +13,12 @@ export class RedisService implements OnModuleInit {
   async onModuleInit() {
     try {
       // 测试连接
-      await this.pingRedis();
+      await this.redisClient.ping();
       this.logger.log('Redis连接成功');
     } catch (error: unknown) {
       const errorMessage =
         error instanceof Error ? error.message : JSON.stringify(error);
       this.logger.error(`Redis连接失败: ${errorMessage}`);
-    }
-  }
-
-  async pingRedis(): Promise<string> {
-    try {
-      const result = await this.redisClient.ping();
-      this.logger.log(`Redis PING 结果: ${result}`);
-      return result;
-    } catch (error: unknown) {
-      const errorMessage =
-        error instanceof Error ? error.message : JSON.stringify(error);
-      this.logger.error(`Redis PING 失败: ${errorMessage}`);
-      throw error;
     }
   }
 
