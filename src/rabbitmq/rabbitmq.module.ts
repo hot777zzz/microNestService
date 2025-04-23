@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-
+import { RabbitMqController } from './rabbitmq.controller';
 @Module({
   imports: [
     ClientsModule.registerAsync([
@@ -25,6 +25,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
       },
     ]),
   ],
+  controllers: [RabbitMqController],
   exports: [ClientsModule],
 })
 export class RabbitMqModule {}

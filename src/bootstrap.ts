@@ -59,7 +59,7 @@ export async function bootstrap() {
   );
   printSuccess('验证管道配置完成');
 
-  // 配置微服务
+  // 配置微服务;
   printInfo('配置 RabbitMQ 微服务...');
   try {
     const rabbitmqUrl = configService.get<string>('RABBITMQ_URL');

@@ -12,7 +12,7 @@ import { RedisModule } from './redis/redis.module';
 import { InfluxdbModule } from './influxdb/influxdb.module';
 import { RabbitMqModule } from './rabbitmq/rabbitmq.module';
 import { ConsulModule } from './consul/consul.module';
-import { UsersModule } from './users/users.module';
+
 import { LoggerModule } from './logger/logger.module';
 import { LoggerMiddleware } from './logger/logger.middleware';
 import * as fs from 'fs';
@@ -27,7 +27,6 @@ import * as path from 'path';
     InfluxdbModule,
     RabbitMqModule,
     ConsulModule,
-    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
