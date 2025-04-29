@@ -7,27 +7,14 @@ import {
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from './config/config.module';
-import { DatabaseModule } from './database/database.module';
-import { RedisModule } from './redis/redis.module';
-import { InfluxdbModule } from './influxdb/influxdb.module';
-import { RabbitMqModule } from './rabbitmq/rabbitmq.module';
-import { ConsulModule } from './consul/consul.module';
-
+import { CommonModule } from './common/common.module';
 import { LoggerModule } from './logger/logger.module';
 import { LoggerMiddleware } from './logger/logger.middleware';
 import * as fs from 'fs';
 import * as path from 'path';
 
 @Module({
-  imports: [
-    ConfigModule,
-    LoggerModule,
-    DatabaseModule,
-    RedisModule,
-    InfluxdbModule,
-    RabbitMqModule,
-    ConsulModule,
-  ],
+  imports: [ConfigModule, LoggerModule, CommonModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,8 +1,8 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { LoggerService } from './logger/logger.service';
-import { InfluxdbService } from './influxdb/influxdb.service';
-import { RedisService } from './redis/redis.service';
+import { InfluxdbService } from './common/influxdb/influxdb.service';
+import { RedisService } from './common/redis/redis.service';
 
 @Controller()
 export class AppController {
