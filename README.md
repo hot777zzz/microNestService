@@ -1,4 +1,4 @@
-# NestJSdemu-cloud后端
+# NestJS微服务后端
 
 这是一个基于NestJS的微服务架构项目，集成了Winston日志系统和redis，rabbitMQ，influxDB等，用于构建可扩展的微服务应用。
 
